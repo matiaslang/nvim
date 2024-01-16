@@ -1,6 +1,3 @@
--- {Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
-
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
@@ -19,7 +16,6 @@ return require('packer').startup(function(use)
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
-    use { "williamboman/mason.nvim"}
     use {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
@@ -27,7 +23,14 @@ return require('packer').startup(function(use)
     }
     use 'ray-x/go.nvim'
     use 'ray-x/guihua.lua' -- recommended if need floating window support
-    use 'neovim/nvim-lspconfig'
+    use 'norcalli/nvim-colorizer.lua'
+    use('jose-elias-alvarez/null-ls.nvim')
+    use('MunifTanjim/prettier.nvim')
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    } 
+    use('windwp/nvim-ts-autotag')
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
