@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
     use 'norcalli/nvim-colorizer.lua'
     use('jose-elias-alvarez/null-ls.nvim')
     use('MunifTanjim/prettier.nvim')
+    use('numToStr/Comment.nvim')
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
